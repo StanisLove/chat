@@ -1,4 +1,5 @@
 class ChatroomsController < ApplicationController
+  before_action :require_login, only: [:new, :create, :destroy]
   before_action :set_chatroom, only: [:show, :edit, :update, :destroy]
 
   # GET /chatrooms
