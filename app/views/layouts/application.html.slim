@@ -40,10 +40,10 @@ html
     .fluid-container style=("margin-top: 70px")
       .row
         .col-sm-2 style=("position: fixed; top: 70px; left: 0;")
-          /- if current_user
-          /  h5 Chatrooms
-          /    ul
-          /      - current_user.chatrooms.each do |chatroom|
-          /        li= link_to chatroom.name, chatroom, data:  behavior: "chatroom-link", chatroom_id: chatroom.id
+          - if current_user
+            h5 Chatrooms
+            ul
+              - current_user.chatrooms.each do |chatroom|
+                li= link_to chatroom.name, '#'
         .col-sm-10.col-sm-offset-2
           = yield
