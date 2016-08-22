@@ -1,10 +1,11 @@
-p
+p.chatroom_title
   strong Name:
   = @chatroom.name
-div data-behavior='messages'
+.messages data-behavior='messages'
   / take last 100 and reverse
-  - @chatroom.messages.order(created_at: :desc).limit(100).reverse.each do |message|
-    div
+  /- @chatroom.messages.order(created_at: :desc).limit(100).reverse.each do |message|
+  - @chatroom.messages.last_one_hundred.each do |message|
+    .message
       strong = message.user.username
       | : 
       = message.body

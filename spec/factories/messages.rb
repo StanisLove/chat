@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :message do
-    chatroom nil
-    user nil
-    body "MyText"
+    sequence(:body) { |n| "Message #{n}" }
+    chatroom
+    user
   end
 end
