@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'chatrooms#index'
-  resources :chatrooms
+  resources :chatrooms do
+    resource :chatroom_users
+  end
   resources :users
   resources :user_sessions, only: [:new, :create, :destroy]
 
