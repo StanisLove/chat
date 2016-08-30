@@ -1,7 +1,7 @@
 p.chatroom_title
   strong Name:
   = @chatroom.name
-.messages data-behavior='messages'
+.messages data-behavior='messages' data-chatroom-id="#{@chatroom.id}"
   / take last 100 and reverse
   /- @chatroom.messages.order(created_at: :desc).limit(100).reverse.each do |message|
   - @chatroom.messages.last_one_hundred.each do |message|
