@@ -12,3 +12,6 @@ App.chatrooms = App.cable.subscriptions.create "ChatroomsChannel",
     else
       chatroom_link = $("[data-behavior='chatroom-link'][data-chatroom-id='#{data.chatroom_id}']")
       chatroom_link.css("font-weight", "bold")
+
+  send_message: (chatroom_id, message) ->
+    @perform "send_message", {chatroom_id: chatroom_id, body: message} # call method send_message of ActionCable
