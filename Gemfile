@@ -30,6 +30,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
+  gem 'browser'
+  gem 'device_detector'
 end
 
 group :development do
