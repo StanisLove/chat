@@ -10,9 +10,5 @@ class ApplicationController < ActionController::Base
 
     def set_user_data
       @ip = request.remote_ip
-     # client = DeviceDetector.new(request.user_agent)
-     # @device_name = client.device_name
-     # @device_type = client.device_type
-     # @device_brand = client.device_brand
     end
 end
