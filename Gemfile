@@ -14,6 +14,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'therubyracer'
 gem 'slim-rails'
 gem 'redis'
+gem 'device_detector'
+gem 'browser'
 
 # gem 'capistrano-rails', group: :development
 

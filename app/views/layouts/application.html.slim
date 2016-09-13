@@ -47,3 +47,5 @@ html
                 li= link_to chatroom.name, chatroom, data: {behavior: "chatroom-link", chatroom_id: chatroom.id, unread: 0}
         .col-sm-10.col-sm-offset-2
           = yield
+    .user-data style=("border: 1px solid black")
+      p Ip: #{@ip}
